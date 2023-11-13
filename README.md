@@ -26,7 +26,7 @@ GET /users/1/books/1/
 + user_id - ユーザID(整数型、必須)　Example: 1
 + book_id - 書籍ID(整数型、必須)　Example: 1
 
-###### Response 200 (application/json)
+###### Response 200
 
 ###### Headers
 
@@ -70,18 +70,32 @@ Content-Type: application/json
 * 指定されたユーザID及び書籍IDに紐づく書籍が存在しない場合、Not Foundを返す。
 * ユーザID及び書籍IDはいずれも必須。どちらも指定がない、もしくは不正な型の場合には、Bad Requestを返す。
 
+##### Example URI
 
-  + Parameters
-    + user_id: 1 (整数型、必須) - ユーザID
-    + book_id: 1 (整数型、必須) - 書籍ID
+POST /users/1/books/1/
 
-  + Request Body (オブジェクト)
-    + date: 2023/01/01 (日付型、必須)
-    + time: 100 (整数型、必須)
-    + place: home (文字列型、必須)
-    + review: 1.0 (浮動小数型、必須)
+##### URI Parameters
+
++ user_id: 1 (整数型、必須) - ユーザID
++ book_id: 1 (整数型、必須) - 書籍ID
+
+
+###### Request Body
+```
+{
+    date: "2023/11/01", 
+    time: 100, 
+    place: "home", 
+    review: 3.0
+}
+```
   
-  + Response 200
+##### Response 200
+
+###### Headers
+```
+Content-Type: application/json
+```
 
 --------
 
@@ -96,22 +110,36 @@ Content-Type: application/json
 * 読書記録がない場合は、Not Foundを返す。
 * ユーザID及び書籍ID、記録IDはいずれも必須。いずれかが指定がない場合には、Bad Requestを返す。
 
-  + Parameters
-    + user_id: 1 (整数型、必須) - ユーザID
-    + book_id: 1 (整数型、必須) - 書籍ID
-    + record_id: 1 (整数型、必須) - 記録ID
+##### Example URI
 
-  + Request Body (オブジェクト)
-    + date: 2023/01/01 (日付型、必須)
-    + time: 100 (整数型、必須)
-    + place: home (文字列型、必須)
-    + review: 1.0 (浮動小数型、必須)
+PATCH /users/1/books/1/records/1/
 
-  + Response 200 (application/json)
+##### URI Parameters
+
++ user_id: 1 (整数型、必須) - ユーザID
++ book_id: 1 (整数型、必須) - 書籍ID
++ record_id: 1 (整数型、必須) - 記録ID
+
+###### Request Body
+```
+{
+    date: "2023/11/01", 
+    time: 100, 
+    place: "home", 
+    review: 3.0
+}
+```
+
+##### Response 200
+
+###### Headers
+```
+Content-Type: application/json
+```
 
 ---------
 
-#### [GET] /users/:user_id/books/:book_id/
+#### [DELETE] /users/:user_id/books/:book_id/records/:record_id/
 読書記録削除API 
 
 ##### 処理概要
@@ -121,12 +149,17 @@ Content-Type: application/json
 * 読書記録がない場合は、Not Foundを返す。
 * ユーザID及び書籍ID、記録IDはいずれも必須。いずれかが指定がない場合には、Bad Requestを返す。
 
-  + Parameters
-    + user_id: 1 (整数型、必須) - ユーザID
-    + book_id: 1 (整数型、必須) - 書籍ID
-    + record_id: 1 (整数型、必須) - 記録ID
-  
-  + Response 200 (application/json)
+##### Example URI
+
+DELETE /users/1/books/1/records/1/
+
+##### URI Parameters
+
++ user_id: 1 (整数型、必須) - ユーザID
++ book_id: 1 (整数型、必須) - 書籍ID
++ record_id: 1 (整数型、必須) - 記録ID
+
+##### Response 200
 
 --------
 
