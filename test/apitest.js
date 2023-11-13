@@ -109,9 +109,9 @@ describe("Reading API Server", () => {
           });
         
         // 【PATCH】読書の記録修正API
-        describe("POST /users/:user_id/books/:book_id/ - Add Record per book", () => {
+        describe("PATCH /users/:user_id/books/:book_id/records/:redord_id - Update Record", () => {
             // 正常系
-            it("should Add a Record", async () => {
+            it("should Update a Record", async () => {
                 // 準備
                 const addData = { date: "2023/11/15", time: 300, place: "cafe", review: 2.0 };
                 const resPost = await request.post("/users/1/books/1/").send(addData);
@@ -164,6 +164,7 @@ describe("Reading API Server", () => {
           });
 
         // 【DELETE】読書の記録削除API
+        describe("DELETE /users/:user_id/books/:book_id/records/:redord_id - Delete Record", () => {
             // 正常系
             it("should Add a Record", async () => {
                 // 準備
@@ -191,5 +192,6 @@ describe("Reading API Server", () => {
               //検証
               res.should.have.status(404);
             });
+        });
     });
 });
