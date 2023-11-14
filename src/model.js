@@ -55,6 +55,7 @@ module.exports = {
         "book.id": bookId,
         "book.user_id": userId,
       })
+      .orderBy('id', 'asc')
       .limit(limit)
       .catch((err) => {
         throw Error(err);
