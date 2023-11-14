@@ -5,7 +5,6 @@
 exports.seed = async function (knex) {
   await knex("record").insert([
     {
-      id: 1,
       book_id: 1,
       date: "2023/11/01",
       time: 100,
@@ -13,7 +12,6 @@ exports.seed = async function (knex) {
       review: 3.0,
     },
     {
-      id: 2,
       book_id: 1,
       date: "2023/11/07",
       time: 150,
@@ -21,7 +19,6 @@ exports.seed = async function (knex) {
       review: 4.0,
     },
     {
-      id: 3,
       book_id: 1,
       date: "2023/11/10",
       time: 180,
@@ -29,7 +26,6 @@ exports.seed = async function (knex) {
       review: 5.0,
     },
     {
-      id: 4,
       book_id: 2,
       date: "2023/11/02",
       time: 100,
@@ -37,7 +33,6 @@ exports.seed = async function (knex) {
       review: 3.0,
     },
     {
-      id: 5,
       book_id: 2,
       date: "2023/11/08",
       time: 150,
@@ -45,7 +40,6 @@ exports.seed = async function (knex) {
       review: 4.0,
     },
     {
-      id: 6,
       book_id: 3,
       date: "2023/11/11",
       time: 180,
@@ -53,7 +47,6 @@ exports.seed = async function (knex) {
       review: 5.0,
     },
     {
-      id: 7,
       book_id: 4,
       date: "2023/11/03",
       time: 100,
@@ -61,7 +54,6 @@ exports.seed = async function (knex) {
       review: 3.0,
     },
     {
-      id: 8,
       book_id: 5,
       date: "2023/11/08",
       time: 150,
@@ -69,7 +61,6 @@ exports.seed = async function (knex) {
       review: 4.0,
     },
     {
-      id: 9,
       book_id: 5,
       date: "2023/11/09",
       time: 180,
@@ -77,7 +68,6 @@ exports.seed = async function (knex) {
       review: 5.0,
     },
     {
-      id: 10,
       book_id: 5,
       date: "2023/11/12",
       time: 100,
@@ -85,7 +75,6 @@ exports.seed = async function (knex) {
       review: 3.0,
     },
     {
-      id: 11,
       book_id: 6,
       date: "2023/11/01",
       time: 100,
@@ -93,7 +82,6 @@ exports.seed = async function (knex) {
       review: 3.0,
     },
     {
-      id: 12,
       book_id: 6,
       date: "2023/11/07",
       time: 150,
@@ -101,7 +89,6 @@ exports.seed = async function (knex) {
       review: 4.0,
     },
     {
-      id: 13,
       book_id: 6,
       date: "2023/11/10",
       time: 180,
@@ -109,7 +96,6 @@ exports.seed = async function (knex) {
       review: 5.0,
     },
     {
-      id: 14,
       book_id: 7,
       date: "2023/11/02",
       time: 100,
@@ -117,7 +103,6 @@ exports.seed = async function (knex) {
       review: 3.0,
     },
     {
-      id: 15,
       book_id: 7,
       date: "2023/11/08",
       time: 150,
@@ -125,7 +110,6 @@ exports.seed = async function (knex) {
       review: 4.0,
     },
     {
-      id: 16,
       book_id: 8,
       date: "2023/11/11",
       time: 180,
@@ -133,7 +117,6 @@ exports.seed = async function (knex) {
       review: 5.0,
     },
     {
-      id: 17,
       book_id: 9,
       date: "2023/11/03",
       time: 100,
@@ -141,7 +124,6 @@ exports.seed = async function (knex) {
       review: 3.0,
     },
     {
-      id: 18,
       book_id: 10,
       date: "2023/11/08",
       time: 150,
@@ -149,7 +131,6 @@ exports.seed = async function (knex) {
       review: 4.0,
     },
     {
-      id: 19,
       book_id: 10,
       date: "2023/11/09",
       time: 180,
@@ -157,7 +138,6 @@ exports.seed = async function (knex) {
       review: 5.0,
     },
     {
-      id: 20,
       book_id: 10,
       date: "2023/11/12",
       time: 100,
@@ -165,7 +145,6 @@ exports.seed = async function (knex) {
       review: 3.0,
     },
     {
-      id: 21,
       book_id: 11,
       date: "2023/11/01",
       time: 100,
@@ -173,7 +152,6 @@ exports.seed = async function (knex) {
       review: 3.0,
     },
     {
-      id: 22,
       book_id: 11,
       date: "2023/11/07",
       time: 150,
@@ -181,7 +159,6 @@ exports.seed = async function (knex) {
       review: 4.0,
     },
     {
-      id: 23,
       book_id: 11,
       date: "2023/11/10",
       time: 180,
@@ -189,7 +166,6 @@ exports.seed = async function (knex) {
       review: 5.0,
     },
     {
-      id: 24,
       book_id: 12,
       date: "2023/11/02",
       time: 100,
@@ -197,7 +173,6 @@ exports.seed = async function (knex) {
       review: 3.0,
     },
     {
-      id: 25,
       book_id: 12,
       date: "2023/11/08",
       time: 150,
@@ -205,7 +180,6 @@ exports.seed = async function (knex) {
       review: 4.0,
     },
     {
-      id: 26,
       book_id: 13,
       date: "2023/11/11",
       time: 180,
@@ -213,7 +187,6 @@ exports.seed = async function (knex) {
       review: 5.0,
     },
     {
-      id: 27,
       book_id: 14,
       date: "2023/11/03",
       time: 100,
@@ -221,7 +194,6 @@ exports.seed = async function (knex) {
       review: 3.0,
     },
     {
-      id: 28,
       book_id: 15,
       date: "2023/11/08",
       time: 150,
@@ -229,7 +201,6 @@ exports.seed = async function (knex) {
       review: 4.0,
     },
     {
-      id: 29,
       book_id: 15,
       date: "2023/11/09",
       time: 180,
@@ -237,7 +208,6 @@ exports.seed = async function (knex) {
       review: 5.0,
     },
     {
-      id: 30,
       book_id: 15,
       date: "2023/11/12",
       time: 100,
@@ -245,7 +215,6 @@ exports.seed = async function (knex) {
       review: 3.0,
     },
     {
-      id: 31,
       book_id: 16,
       date: "2023/11/01",
       time: 100,
@@ -253,7 +222,6 @@ exports.seed = async function (knex) {
       review: 3.0,
     },
     {
-      id: 32,
       book_id: 16,
       date: "2023/11/07",
       time: 150,
@@ -261,7 +229,6 @@ exports.seed = async function (knex) {
       review: 4.0,
     },
     {
-      id: 33,
       book_id: 16,
       date: "2023/11/10",
       time: 180,
@@ -269,7 +236,6 @@ exports.seed = async function (knex) {
       review: 5.0,
     },
     {
-      id: 34,
       book_id: 17,
       date: "2023/11/02",
       time: 100,
@@ -277,7 +243,6 @@ exports.seed = async function (knex) {
       review: 3.0,
     },
     {
-      id: 35,
       book_id: 17,
       date: "2023/11/08",
       time: 150,
@@ -285,7 +250,6 @@ exports.seed = async function (knex) {
       review: 4.0,
     },
     {
-      id: 36,
       book_id: 18,
       date: "2023/11/11",
       time: 180,
@@ -293,7 +257,6 @@ exports.seed = async function (knex) {
       review: 5.0,
     },
     {
-      id: 37,
       book_id: 19,
       date: "2023/11/03",
       time: 100,
@@ -301,7 +264,6 @@ exports.seed = async function (knex) {
       review: 3.0,
     },
     {
-      id: 38,
       book_id: 20,
       date: "2023/11/08",
       time: 150,
@@ -309,7 +271,6 @@ exports.seed = async function (knex) {
       review: 4.0,
     },
     {
-      id: 39,
       book_id: 20,
       date: "2023/11/09",
       time: 180,
@@ -317,7 +278,6 @@ exports.seed = async function (knex) {
       review: 5.0,
     },
     {
-      id: 40,
       book_id: 20,
       date: "2023/11/12",
       time: 100,
@@ -325,7 +285,6 @@ exports.seed = async function (knex) {
       review: 3.0,
     },
     {
-      id: 41,
       book_id: 21,
       date: "2023/11/01",
       time: 100,
@@ -333,7 +292,6 @@ exports.seed = async function (knex) {
       review: 3.0,
     },
     {
-      id: 42,
       book_id: 21,
       date: "2023/11/07",
       time: 150,
@@ -341,7 +299,6 @@ exports.seed = async function (knex) {
       review: 4.0,
     },
     {
-      id: 43,
       book_id: 21,
       date: "2023/11/10",
       time: 180,
@@ -349,7 +306,6 @@ exports.seed = async function (knex) {
       review: 5.0,
     },
     {
-      id: 44,
       book_id: 22,
       date: "2023/11/02",
       time: 100,
@@ -357,7 +313,6 @@ exports.seed = async function (knex) {
       review: 3.0,
     },
     {
-      id: 45,
       book_id: 22,
       date: "2023/11/08",
       time: 150,
@@ -365,7 +320,6 @@ exports.seed = async function (knex) {
       review: 4.0,
     },
     {
-      id: 46,
       book_id: 23,
       date: "2023/11/11",
       time: 180,
@@ -373,7 +327,6 @@ exports.seed = async function (knex) {
       review: 5.0,
     },
     {
-      id: 47,
       book_id: 24,
       date: "2023/11/03",
       time: 100,
@@ -381,7 +334,6 @@ exports.seed = async function (knex) {
       review: 3.0,
     },
     {
-      id: 48,
       book_id: 25,
       date: "2023/11/08",
       time: 150,
@@ -389,7 +341,6 @@ exports.seed = async function (knex) {
       review: 4.0,
     },
     {
-      id: 49,
       book_id: 25,
       date: "2023/11/09",
       time: 180,
@@ -397,7 +348,6 @@ exports.seed = async function (knex) {
       review: 5.0,
     },
     {
-      id: 50,
       book_id: 25,
       date: "2023/11/12",
       time: 100,
@@ -405,7 +355,6 @@ exports.seed = async function (knex) {
       review: 3.0,
     },
     {
-      id: 51,
       book_id: 26,
       date: "2023/11/01",
       time: 100,
@@ -413,7 +362,6 @@ exports.seed = async function (knex) {
       review: 3.0,
     },
     {
-      id: 52,
       book_id: 26,
       date: "2023/11/07",
       time: 150,
@@ -421,7 +369,6 @@ exports.seed = async function (knex) {
       review: 4.0,
     },
     {
-      id: 53,
       book_id: 26,
       date: "2023/11/10",
       time: 180,
@@ -429,7 +376,6 @@ exports.seed = async function (knex) {
       review: 5.0,
     },
     {
-      id: 54,
       book_id: 27,
       date: "2023/11/02",
       time: 100,
@@ -437,7 +383,6 @@ exports.seed = async function (knex) {
       review: 3.0,
     },
     {
-      id: 55,
       book_id: 27,
       date: "2023/11/08",
       time: 150,
@@ -445,7 +390,6 @@ exports.seed = async function (knex) {
       review: 4.0,
     },
     {
-      id: 56,
       book_id: 28,
       date: "2023/11/11",
       time: 180,
@@ -453,7 +397,6 @@ exports.seed = async function (knex) {
       review: 5.0,
     },
     {
-      id: 57,
       book_id: 29,
       date: "2023/11/03",
       time: 100,
@@ -461,7 +404,6 @@ exports.seed = async function (knex) {
       review: 3.0,
     },
     {
-      id: 58,
       book_id: 30,
       date: "2023/11/08",
       time: 150,
@@ -469,7 +411,6 @@ exports.seed = async function (knex) {
       review: 4.0,
     },
     {
-      id: 59,
       book_id: 30,
       date: "2023/11/09",
       time: 180,
@@ -477,7 +418,6 @@ exports.seed = async function (knex) {
       review: 5.0,
     },
     {
-      id: 60,
       book_id: 30,
       date: "2023/11/12",
       time: 100,

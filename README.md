@@ -23,12 +23,11 @@
 
 GET /users/1/books/1/
 
-##### URI Parameters
+- URI Parameters
+  - user_id - ユーザID(整数型、必須)　Example: 1
+  - book_id - 書籍ID(整数型、必須)　Example: 1
 
-- user_id - ユーザID(整数型、必須)　Example: 1
-- book_id - 書籍ID(整数型、必須)　Example: 1
-
-###### Response 200
+##### Response 200
 
 ###### Headers
 
@@ -59,6 +58,36 @@ Content-Type: application/json
         }
     ]
 }
+```
+
+##### Response 200 - Result Empty -
+
+###### Headers
+
+```
+Content-Type: application/json
+```
+
+###### Body
+
+```
+{
+    "records":[]
+}
+```
+
+##### Response 400
+
+###### Headers
+
+```
+Content-Type: application/json
+```
+
+###### Body
+
+```
+{ msg: "Bad Request" }
 ```
 
 ---
@@ -94,12 +123,32 @@ POST /users/1/books/1/
 }
 ```
 
-##### Response 200
+##### Response 400
 
 ###### Headers
 
 ```
 Content-Type: application/json
+```
+
+###### Body
+
+```
+{ msg: "Bad Request" }
+```
+
+##### Response 404
+
+###### Headers
+
+```
+Content-Type: application/json
+```
+
+###### Body
+
+```
+{ msg: "Not Found" }
 ```
 
 ---
@@ -113,7 +162,7 @@ Content-Type: application/json
 - 任意の書籍に関する読書記録を更新する。
 - ユーザID及び書籍ID、記録IDがいずれも指定されている場合、ユーザID及び書籍ID、記録IDに紐づく読書記録を修正してステータスコード200を返す。
 - リクエストボディに記載された項目のみ更新する。
-- 読書記録がない場合は、Not Foundを返す。
+- 対象の読書記録がない場合は、Not Foundを返す。
 - ユーザID及び書籍ID、記録IDはいずれも必須。いずれかが指定がない場合には、Bad Requestを返す。
 
 ##### Example URI
@@ -145,6 +194,34 @@ PATCH /users/1/books/1/records/1/
 Content-Type: application/json
 ```
 
+##### Response 400
+
+###### Headers
+
+```
+Content-Type: application/json
+```
+
+###### Body
+
+```
+{ msg: "Bad Request" }
+```
+
+##### Response 404
+
+###### Headers
+
+```
+Content-Type: application/json
+```
+
+###### Body
+
+```
+{ msg: "Not Found" }
+```
+
 ---
 
 #### [DELETE] /users/:user_id/books/:book_id/records/:record_id/
@@ -155,7 +232,7 @@ Content-Type: application/json
 
 - 任意の書籍に関する読書記録を返す。
 - ユーザID及び書籍IDがいずれも指定されている場合、ユーザID及び書籍IDに紐づく読書記録の一覧を返す。
-- 読書記録がない場合は、Not Foundを返す。
+- 対象の読書記録がない場合は、Not Foundを返す。
 - ユーザID及び書籍ID、記録IDはいずれも必須。いずれかが指定がない場合には、Bad Requestを返す。
 
 ##### Example URI
@@ -169,6 +246,46 @@ DELETE /users/1/books/1/records/1/
 - record_id: 1 (整数型、必須) - 記録ID
 
 ##### Response 200
+
+###### Headers
+
+```
+Content-Type: application/json
+```
+
+###### Body
+
+```
+{ msg: ”Success" }
+```
+
+##### Response 400
+
+###### Headers
+
+```
+Content-Type: application/json
+```
+
+###### Body
+
+```
+{ msg: "Bad Request" }
+```
+
+##### Response 404
+
+###### Headers
+
+```
+Content-Type: application/json
+```
+
+###### Body
+
+```
+{ msg: "Not Found" }
+```
 
 ---
 
